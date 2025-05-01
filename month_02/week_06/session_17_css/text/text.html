@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color: rgb(144, 90, 80);
+            text-align: center;
+        }
+        #blue{
+            background-color: aqua;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .pink{
+            background-color: pink;
+            color: white;
+            font-family: Noto;
+        }
+        @font-face {
+            font-family: Noto;
+            src: url(./NotoSansGunjalaGondi-VariableFont_wght.ttf);
+        }
+        .one{
+            font-weight: bold;
+        }
+        .two{
+            font-style: inherit;
+        }
+        .three{
+            font-size: 20px;
+        }
+        .lowercase{
+            text-transform:capitalize;
+            text-decoration: underline;
+
+        }
+        .uppercase{
+            text-transform: uppercase;
+            text-decoration: overline;
+            word-spacing: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .shadow{
+            text-shadow: 2px 1px 4px rgb(166, 72, 72);
+        }
+        .link{
+            color: red;
+        }
+        .link:hover{
+            color: blue;
+        }
+        .link:active{
+            color: yellow;
+        }
+        .link:visited{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h2>css - text</h2>
+    <p id="blue">Lorem ipsum dolor sit amet.</p>
+    <p class="pink">Lorem ipsum dolor sit amet.</p>
+    <ul>
+        <li class="one">heh</li>
+        <li class="two">hhi</li>
+        <li class="three">hha</li>
+    </ul>
+    <h4>text-transform:</h4>
+    <p class="lowercase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magni totam, aspernatur doloribus illum voluptate inventore? Esse magni laudantium exercitationem explicabo, est provident, delectus laboriosam nobis aliquid similique autem adipisci.</p>
+    <p class="uppercase">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex architecto fugiat quidem? Dolorum necessitatibus consequuntur eos tenetur architecto! Saepe accusamus assumenda consectetur ipsa excepturi optio architecto omnis earum, cumque corrupti!</p>
+    <a href="../text/text.html">text</a>
+    <p class="shadow">shadow</p>
+    <ul>
+        <li><a class="link" href="">link</a></li>
+    </ul>
+</body>
+</html>
