@@ -1,0 +1,16 @@
+{
+    "name": "John",
+    "age": 30,
+    "city": "New York",
+    "languages": [
+        "Python",
+        "JavaScript",
+        "SQL"
+    ],
+    "is_employee": true,
+    "address": {
+        "street": "123 Main St",
+        "zip": "10001"
+    },
+    "file": ""
+}
