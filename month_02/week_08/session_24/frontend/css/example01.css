@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.example {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.demo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    /* transition */
+    transition: background-color 0.5s ease-in;
+}
+
+.color-box:hover {
+    background-color: #e74c3c;
+}
+
+/* Example 02 */
+.size-box {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    transition: transform 0.5s ease;
+}
+
+.size-box:hover {
+    transform: scale(1.2);
+}
+
+/* Example 03 */
+.rotate-box {
+    width: 100px;
+    height: 100px;
+    background-color: #f1c40f;
+    transition: transform 0.7s ease-in-out;
+}
+
+.rotate-box:hover {
+    transform: rotate(180deg);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+/* Example 04 */
+
+.radius-box {
+    background-color: #9b59b6;
+    transition: border-radius 0.5s ease;
+}
+
+.radius-box:hover {
+    border-radius: 50%;
+}
+
+/* Example 05 */
+.shadow-box {
+    background-color: #e67e22;
+    transition: box-shadow 0.5s ease;
+}
+
+.shadow-box:hover {
+    box-shadow: 0 5px 15px rgba(0 0, 0, 0.3);
+}
+
+/* Example 06 */
+.text-change {
+    font-size: 20px;
+    color: #34495e;
+    transition: color 0.5s ease;
+    cursor: pointer;
+}
+
+.text-change:hover {
+    color: #3498db;
+}
+/* Example 07 */
+.multi-box {
+    background-color: #1abc9c;
+    transition: all 0.5s ease-in-out;
+}
+
+.multi-box:hover {
+    background-color: #3498db;
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* Example 08 */
+
+.timing-box {
+    width: 50px;
+    height: 50px;
+    background-color: #16a085;
+    position: relative;
+    transition: left 2s;
+    left: 0;
+}
+
+.timing-container {
+    position: relative;
+    height: 60px;
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.timing-container:hover .timing-box {
+    left: 150px;
+}
+
+.timing-linear {
+    transition-timing-function: linear;
+}
+
+.timing-ease {
+    transition-timing-function: ease;
+}
+
+.timing-ease-in {
+    transition-timing-function: ease-in;
+}
+
+.timing-ease-out {
+    transition-timing-function: ease-in-out;
+}
+
+/* Example 09 */
+.delay-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.delay-box {
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    transition: transform 0.5s ease;
+}
+.delay-container:hover .delay-1 {
+    transform: translateY(-20px);
+    transition-delay: 0.1s;
+}
+
+.delay-container:hover .delay-2 {
+    transform: translateY(-20px);
+    transition-delay: 0.1s;
+}
+
+.delay-container:hover .delay-3 {
+    transform: translateY(-20px);
+    transition-delay: 0.2s;
+}
+.delay-container:hover .delay-4 {
+    transform: translateY(-20px);
+    transition-delay: 0.3s;
+}
+.delay-container:hover .delay-5 {
+    transform: translateY(-20px);
+    transition-delay: 0.4s;
+}
+/* Example 10 */
+.button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: translateX(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Example 11 */
+.my-box {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 100px;
+    position: relative;
+
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
+
+/* Example 12 */
+
+.fade-box {
+    height: 150px;
+    width: 150px;
+    background-color: lightgreen;
+    opacity: 0;
+}
+
+.fade-box:hover {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
