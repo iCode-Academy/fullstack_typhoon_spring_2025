@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <!-- outer orange container -->
+      <div id="outer-container">
+        <!-- inner white container -->
+        <div id="inner-container">
+          <!-- left side column -->
+          <div class="left-column">
+            <form action="#">
+              <!-- Check in form group -->
+              <div class="form-group">
+                <label for="check-in">Check In</label>
+                <input type="date" id="check-in" />
+              </div>
+
+              <!-- Check out form group -->
+              <div class="form-group">
+                <label for="checkout">Check Out</label>
+                <input type="date" id="check-out" />
+              </div>
+
+              <!-- adults and children form group -->
+              <div class="form-group">
+                <div class="adults-children-selector">
+                  <div>
+                    <label for="adults">Adults</label>
+                    <select name="adults" id="adults">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="adults">Children</label>
+                    <select name="adults" id="adults">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button type="submit">Book a room</button>
+            </form>
+          </div>
+          <!-- right side column -->
+          <div class="right-column">
+            <div id="top">
+              <img src="./images/big_room.svg" alt="" />
+            </div>
+            <div id="bottom">
+              <img src="./images/room01.svg" alt="" />
+              <img src="./images/room02.svg" alt="" />
+              <img src="./images/room03.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

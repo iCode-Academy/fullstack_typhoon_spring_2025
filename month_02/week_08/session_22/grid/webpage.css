@@ -1,0 +1,32 @@
+.container{
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "menu content"
+        "footer footer";
+    grid-template-columns: 2fr 3fr;
+    gap: 5px;
+    background-color: aqua;
+    padding: 5px;
+
+}
+.container >div{
+    background-color: aqua;
+    padding: 10px;
+}
+.container > div.header {
+    grid-area: header;
+    background-color: rgb(255, 169, 169);
+    padding: 10px;
+}
+.container > div.menu{
+    grid-area: menu;
+}
+.container > div.content{
+    grid-area: content;
+}
+.container > div.footer{
+    grid-area: footer;
+    background-color: rgb(255, 169, 169);
+
+}

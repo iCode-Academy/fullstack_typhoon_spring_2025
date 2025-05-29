@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/Lato-Bold.ttf);
+}
+
+.main {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  background: #d1ffdb;
+  position: relative;
+}
+
+.meeting-title-container {
+  position: absolute;
+  top: 78px;
+  right: 312px;
+  width: 440px;
+  height: 403.5px;
+  flex-shrink: 0;
+  border-radius: 48px;
+  background: #3d663f;
+}
+
+.meeting-title-container p {
+  position: absolute;
+  color: #fff;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  top: 32px;
+  left: 24px;
+  margin: 0;
+}
+
+.meeting-content-container {
+  position: absolute;
+  top: 171px;
+  right: 312px;
+  width: 440px;
+  height: 388px;
+  flex-shrink: 0;
+  border-radius: 48px;
+  background: #fff;
+}
+
+.meeting-content-container .title-text {
+  color: #212121;
+  font-family: Lato;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.title-container,
+.date-container {
+  margin-left: 24px;
+}
+
+.date-title-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.date-container input,
+.title-container input {
+  display: flex;
+  width: 357px;
+  padding: 10px 8px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #f6f6f6;
+  border: none;
+}
+
+input[type="text"] {
+  color: rgba(6, 23, 44, 0.6);
+  font-family: Lato;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* Time Show */
+
+.time-container {
+  margin-left: 24px;
+  display: flex;
+  gap: 20px;
+}
+
+.time-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.start-time input,
+.end-time input {
+  display: flex;
+  width: 161px;
+  padding: 10px 8px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #f6f6f6;
+  border: none;
+}
+
+.submit-button {
+  display: flex;
+  width: 375px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  background: #f1ff50;
+  border: none;
+  margin: 24px;
+}
+
+/* Calendar Styles */
+
+.calendar-container {
+  position: relative;
+  left: 176px;
+  top: 154px;
+  width: 440px;
+  height: 405px;
+  flex-shrink: 0;
+  border-radius: 48px;
+  background: linear-gradient(0deg, #3d663f 0%, #3d663f 100%), #fff;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.12);
+}
+
+.calendar-title {
+  position: relative;
+  top: 32px;
+  left: 24px;
+  margin: 0;
+  color: #f1ff50;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.calendar-header {
+  margin-left: 24px;
+  margin-top: 8px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header > p {
+  position: relative;
+  color: #fff;
+  font-family: Lato;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding-top: 5px;
+}
+.icon-container {
+  display: flex;
+  gap: 16px;
+}
+
+.icon-container .first,
+.icon-container .second {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 99px;
+  background: #e4ffea;
+}
+
+.calendar-days-container {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.calendar-days-container .week-header {
+  display: flex;
+  gap: 46.5px;
+}
+
+.calendar-days-container .header {
+  color: #fff;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.calendar-days-container .separator {
+  width: 380px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+}
+

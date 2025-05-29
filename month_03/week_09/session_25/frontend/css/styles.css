@@ -1,0 +1,97 @@
+main {
+  max-width: 1440px;
+  height: 100vh;
+  background: #d1ffdb;
+  position: relative;
+}
+
+.task-container {
+  position: absolute;
+  width: 490px;
+  height: 403.5px;
+  flex-shrink: 0;
+  border-radius: 48px;
+  background: #fff;
+  bottom: 77.5px;
+  left: 230px;
+}
+
+p.task-date {
+  color: #212121;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 32px;
+  margin-left: 24px;
+  margin-bottom: 32px;
+}
+.task-container .task {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  margin-left: 24px;
+  align-items: center;
+}
+.task .todo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.todo .name {
+  color: #212121;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.todo .time {
+  color: rgba(33, 33, 33, 0.8);
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.task .icon {
+  position: relative;
+}
+
+.task .icon .check {
+  width: 16.754px;
+  height: 12.575px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 10.01px;
+  left: 7.83px;
+}
+
+.task .icon .inner-circle {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+}
+
+.line {
+  position: absolute;
+  top: 37px;
+  left: 15px;
+  height: 53px;
+  border-left: 1px dotted black;
+  transform: rotate(180deg);
+}
