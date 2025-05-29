@@ -9,7 +9,7 @@
     height: 150px;
     background-color: rgb(236, 66, 94);
     margin-top: 10px;
-    align-self:stretch;
+    align-self:ce;
 }
 .container{
     display: flex;
