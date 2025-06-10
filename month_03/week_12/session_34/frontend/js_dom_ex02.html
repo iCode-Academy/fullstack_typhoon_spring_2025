@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Exercise 02</title>
+  </head>
+  <body>
+    <p>
+      The sum of <span id="num_one"> 4 </span> and
+      <span id="num_two"> 6 </span> is:
+    </p>
+    <p id="result"></p>
+    <script>
+      //Write your code to solve this exercise here!
+      let numberOne = document.getElementById("num_one");
+      console.log(numberOne);
+      let numberTwo = document.getElementById("num_two");
+      let result =
+        parseInt(numberOne.textContent) + parseInt(numberTwo.textContent);
+      let resultElement = document.getElementById("result");
+      resultElement.innerHTML = result;
+    </script>
+
+    <script>
+        console.log(window.document); // console.log(document);
+    </script>
+  </body>
+</html>

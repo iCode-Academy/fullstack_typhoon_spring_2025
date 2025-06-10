@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introductions</title>
+	</head>
+
+	<body>
+		<h3 id="welcome"></h3>
+		<h3 id="snack"></h3>
+		<h3 id="tv-show"></h3>
+		
+		<script>
+		    //Write your prompts here
+            // Доорх бүх мэдээллүүдийг дандаа prompt-оор асууна уу
+            // welcome дээр өөрийнхөө нэрийг оруулна
+            // snack дээр өөрийнхөө дуртай snack-ийг цувуулж харуулна
+            // tv-show дээр өөрийнхөө дуртай кинонуудыг бичээрэй.
+            let welcome = prompt("What is your Name");
+		    let snack = prompt("What is your favorite snack?");
+		    let tvShow = prompt("What is your favorite tv show?")
+		    
+		    document.getElementById('welcome').innerHTML = welcome;
+		    document.getElementById('snack').innerHTML = snack;
+		    document.getElementById('tv-show').innerHTML = tvShow;
+		</script>
+	</body>
+</html>
