@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let firstNumber = prompt('Give me first number');
+      let secondNumber = prompt('Give me second number');
+
+      // 1 - 10 ---> 10, 8 random тоо харуулах
+    //   document.write(Math.floor(Math.random() * 10 + 1));
+      function getRandomArbitrary(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+      }
+
+      let randomNumber = getRandomArbitrary(parseInt(firstNumber), parseInt(secondNumber));
+      document.write(randomNumber);
+
+
+      // recursive function
+      function factorial(number){
+        if (number === 0){
+            return 1;
+        } else if (number === 1){
+            return 1;
+        } else {
+           return number * factorial(number - 1);
+        }
+      }
+      document.write('<br />');
+      document.write('Factorial of : ' + factorial(10));
+
+      
+
+    </script>
+  </body>
+</html>
