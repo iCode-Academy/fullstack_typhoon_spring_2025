@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            This is my webpage!
+        </title>
+    </head>
+    <body>
+        <h4>Open the console to see the two printed p tags!</h4>
+        <p>
+            Welcome to my website!
+        </p>
+        <p id = "para_one">
+            This is a paragraph!
+        </p>
+        <script>
+           let paragraphs = document.getElementsByTagName('p');
+           console.log(paragraphs);
+           console.log(paragraphs[0]);
+           console.log(paragraphs[1]);
+
+           console.log(paragraphs[0].innerHTML);
+           console.log(paragraphs[1].innerHTML);
+
+           
+           console.log(paragraphs[0].innerText);
+        </script>
+    </body>
+</html>
