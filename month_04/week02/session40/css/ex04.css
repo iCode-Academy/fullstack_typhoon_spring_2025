@@ -1,0 +1,14 @@
+html, body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+div {
+    height: 10%;
+    width: 9%;
+    border: 1px solid black;
+}

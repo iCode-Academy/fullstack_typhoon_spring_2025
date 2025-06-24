@@ -1,0 +1,12 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div {
+  background-color: blue;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}

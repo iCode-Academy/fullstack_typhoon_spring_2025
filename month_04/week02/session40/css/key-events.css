@@ -1,0 +1,17 @@
+#textbox {
+    border: 1px solid black;
+    height: 200px;
+    width: 80%;
+    margin: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    text-align: center;
+    font-size: 12px;
+}
