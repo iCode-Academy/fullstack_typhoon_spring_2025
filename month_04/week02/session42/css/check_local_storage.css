@@ -1,0 +1,23 @@
+#progress-bar {
+    border: 1px solid black;
+    height: 30px;
+    width: 300px;
+}
+
+#progress {
+    background-color: green;
+    height: 30px;
+    width: 10px;
+    display: none;
+    transition: width 2s ease-in-out;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#progress-button {
+    margin: 10px;
+}

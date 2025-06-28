@@ -1,0 +1,23 @@
+.visits {
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    background-color: #293462;
+}
+
+.instructions {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #ec9b3b;
+}
+
+.student {
+    padding: 10px;
+    background-color: #00818a;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+}
