@@ -1,0 +1,29 @@
+main {
+    max-width: 1400px;
+    background-color: azure;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+main h1 {
+    text-align: center;
+}
+
+
+main ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pokemon-detail-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+
+
+.pokemon-detail-container img {
+    width: 250px;
+    height: 250px;
+}
