@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "icode-summer-course-2025-e190d",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
