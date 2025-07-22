@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Filter</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #product-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .product { border: 1px solid #ccc; padding: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Filter Products</h2>
+
+  <label for="category-select">Category:</label>
+  <select id="category-select">
+    <option value="">All</option>
+    <option value="smartphones">Smartphones</option>
+    <option value="laptops">Laptops</option>
+    <option value="fragrances">Fragrances</option>
+    <option value="skincare">Skincare</option>
+    <!-- Add more if needed -->
+  </select>
+
+  <input type="text" id="search-input" placeholder="Search product name..." />
+
+  <div id="product-list"></div>
+
+  <script>
+    const categorySelect = document.getElementById('category-select');
+    const searchInput = document.getElementById('search-input');
+    const productList = document.getElementById('product-list');
+
+    async function fetchProducts() {
+      const res = await fetch('https://dummyjson.com/products?limit=100');
+      const data = await res.json();
+      return data.products;
+    }
+
+    function displayProducts(products) {
+      productList.innerHTML = '';
+      if (products.length === 0) {
+        productList.innerHTML = '<p>No products found.</p>';
+        return;
+      }
+      products.forEach(product => {
+        const div = document.createElement('div');
+        div.className = 'product';
+        div.innerHTML = `
+          <h4>${product.title}</h4>
+          <p><strong>Category:</strong> ${product.category}</p>
+          <p>${product.description}</p>
+        `;
+        productList.appendChild(div);
+      });
+    }
+
+    async function init() {
+      const products = await fetchProducts();
+
+      function filterAndDisplay() {
+        const selectedCategory = categorySelect.value;
+        const searchTerm = searchInput.value.toLowerCase();
+
+        const filtered = products.filter(p => {
+          const matchesCategory = selectedCategory === '' || p.category === selectedCategory;
+          const matchesSearch = p.title.toLowerCase().includes(searchTerm);
+          return matchesCategory && matchesSearch;
+        });
+
+        displayProducts(filtered);
+      }
+
+      // Initial display
+      displayProducts(products);
+
+      // Event listeners
+      categorySelect.addEventListener('change', filterAndDisplay);
+      searchInput.addEventListener('input', filterAndDisplay);
+    }
+
+    init();
+  </script>
+
+</body>
+</html>

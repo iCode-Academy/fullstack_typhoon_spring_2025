@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <label for="category-select">Category:</label>
+      <select id="category-select">
+        <option value="">All</option>
+        <option value="smartphones">Smartphones</option>
+        <option value="laptops">Laptops</option>
+        <option value="fragrances">Fragrances</option>
+        <option value="skincare">Skincare</option>
+        <option value="groceries">Groceries</option>
+      </select>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Бүтээгдэхүүний нэрээр хайх..."
+        />
+        <button id="searchButton">Хайх</button>
+      </div>
+      <div id="results" class="results"></div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+    <script src="./js/sorting.js"></script>
+  </body>
+</html>
