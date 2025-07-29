@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    background: #fff;
+    padding: 10px;
+    border-bottom: 1px #ccc dotted;
+}

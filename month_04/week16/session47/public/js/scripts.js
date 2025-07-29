@@ -5,6 +5,15 @@ const PRODUCT_URL = 'https://dummyjson.com/products/search?q='
 
 const categorySelect = document.getElementById('category-select');
 
+// Modal Elements
+const modal = document.getElementById('product-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalImage = document.getElementById('modal-image');
+const modalDescription = document.getElementById('modal-description');
+const modalPrice = document.getElementById('modal-price');
+const modalRating = document.getElementById('modal-rating');
+const closeBtn = document.querySelector('.close-btn');
+
 function filterAndDisplay(){
     const selectedCategory = categorySelect.value;
     const filtered = globalData.filter((product) => {
@@ -54,8 +63,19 @@ function displayData(products){
             <p>Rating: ${product.rating}</p>
             <p>${product.description}</p>
         `;
+        // add event listener
+        itemDiv.addEventListener('click', () => showModal(product));
         resultsDiv.appendChild(itemDiv);
     })
+}
+
+function showModal(product){
+    modalTitle.textContent = product.title;
+    modalImage.src = product.thumbnail;
+    modalDescription.textContent= product.description;
+    modalPrice.textContent = product.price;
+    modalRating.textContent = product.rating;
+    modal.style.display = 'block';
 }
 
 const searchData = () => {
@@ -81,10 +101,15 @@ document.getElementById('searchInput').addEventListener('keyup', (e) => {
         debouncedSearch();
     }
 })
+
 categorySelect.addEventListener('change', filterAndDisplay);
 
-
-
+closeBtn.addEventListener('click', () => modal.style.display = 'none');
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
 
 
 fetchData();
